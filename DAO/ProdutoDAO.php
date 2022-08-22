@@ -1,6 +1,8 @@
 <?php
 //As classes DAO são responsáveis por executar o SQL em conjunto com o banco de dados.
- 
+namespace App\DAO;
+use App\Model\ProdutoModel;
+use \PDO;
 class ProdutoDAO
 {
     // Propriedade da classe que  armazenará o link de conexão com o banco de dados.

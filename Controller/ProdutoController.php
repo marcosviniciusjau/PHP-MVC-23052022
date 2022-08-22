@@ -1,5 +1,7 @@
 <?php
 // As classes Controller são responsáveis por responder os comandos do usuário mostando a View
+namespace App\Controller;
+use App\Model\ProdutoModel;
 
 class ProdutoController 
 {
