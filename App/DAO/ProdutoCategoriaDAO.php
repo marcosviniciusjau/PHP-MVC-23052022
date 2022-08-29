@@ -53,7 +53,7 @@ class ProdutoCategoriaDAO
    
     public function selectById(int $id)
     {
-        include_once 'Model/ProdutoCategoriaModel.php';
+
 
         $sql = "SELECT * FROM produto_categoria WHERE id = ?";
 
@@ -61,7 +61,7 @@ class ProdutoCategoriaDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("ProdutoCategoriaModel"); 
+        return $stmt->fetchObject("App\Model\ProdutoCategoriaModel"); 
     }
 
 
