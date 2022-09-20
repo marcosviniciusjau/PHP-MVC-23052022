@@ -3,34 +3,36 @@
 namespace App\Controller;
 use App\Model\ProdutoCategoriaModel;
 
-class ProdutoCategoriaController 
+class ProdutoCategoriaController extends Controller
 {
     
     public static function index()
     {
-      include 'Model/ProdutoCategoriaModel.php'; 
+
         $model = new ProdutoCategoriaModel(); 
         $model->getAllRows(); 
-        include 'View/modules/ProdutoCategoria/ListaProdutoCategoria.php'; 
+
+        parent::render('ProdutoCategoria/ListaProdutoCategoria', $model);
      }
 
 
   
     public static function form()
     {
-        include 'Model/ProdutoCategoriaModel.php';
+
         $model = new ProdutoCategoriaModel();
 
         if(isset($_GET['id'])) 
             $model = $model->getById( (int) $_GET['id']); 
             
-        include 'View/modules/ProdutoCategoria/FormProdutoCategoria.php'; 
+                
+            parent::render('ProdutoCategoria/FormProdutoCategoria', $model);
      }
 
 
     public static function save()
     {
-       include 'Model/ProdutoCategoriaModel.php';
+
        $model = new ProdutoCategoriaModel();
 
        $model->id =  $_POST['id'];
@@ -43,7 +45,7 @@ class ProdutoCategoriaController
 
     public static function delete()
     {
-        include 'Model/ProdutoCategoriaModel.php'; 
+
 
         $model = new ProdutoCategoriaModel();
 

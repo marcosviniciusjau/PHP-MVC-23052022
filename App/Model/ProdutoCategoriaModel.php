@@ -2,15 +2,14 @@
 namespace App\Model;
 use App\DAO\ProdutoCategoriaDAO;
 
-class ProdutoCategoriaModel
+class ProdutoCategoriaModel extends Model
 {
     public $id, $descricao;
-    public $rows;
+    
 
     public function save()
     {
-        include 'DAO/ProdutoCategoriaDAO.php';
-
+      
         $dao = new ProdutoCategoriaDAO(); 
 
         if(empty($this->id))
@@ -27,7 +26,7 @@ class ProdutoCategoriaModel
    
     public function getAllRows()
     {
-        include 'DAO/ProdutoCategoriaDAO.php'; 
+         
           $dao = new ProdutoCategoriaDAO();
 
         $this->rows = $dao->select();
@@ -37,7 +36,7 @@ class ProdutoCategoriaModel
    
     public function getById(int $id)
     {
-        include 'DAO/ProdutoCategoriaDAO.php';
+  
 
         $dao = new ProdutoCategoriaDAO();
 
@@ -51,7 +50,7 @@ class ProdutoCategoriaModel
    
     public function delete(int $id)
     {
-        include 'DAO/ProdutoCategoriaDAO.php'; 
+     
 
         $dao = new ProdutoCategoriaDAO();
 

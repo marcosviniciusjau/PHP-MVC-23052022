@@ -3,17 +3,15 @@ namespace App\DAO;
 use App\Model\ProdutoCategoriaModel;
 use \PDO;
 
-class ProdutoCategoriaDAO
+class ProdutoCategoriaDAO extends DAO
 {
     private $conexao;
 
 
     public function __construct()
     {
-      $dsn = "mysql:host=localhost:3307;dbname=db_mvc";
-
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
-    }
+        parent::__construct();   
+     }
 
     public function insert(ProdutoCategoriaModel $model)
     {

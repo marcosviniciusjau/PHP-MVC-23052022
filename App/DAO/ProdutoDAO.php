@@ -3,7 +3,7 @@
 namespace App\DAO;
 use App\Model\ProdutoModel;
 use \PDO;
-class ProdutoDAO
+class ProdutoDAO extends DAO
 {
     // Propriedade da classe que  armazenará o link de conexão com o banco de dados.
 
@@ -11,12 +11,9 @@ class ProdutoDAO
 
 
     public function __construct()
-    {
-        // O dsn é o endereço do servidor MySql
-      $dsn = "mysql:host=localhost:3307;dbname=db_mvc";
-
-      // Aqui está criando a conexão e armazenando em sua respectiva propriedade
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
+    {    
+        parent::__construct();   
+     
     }
 
    // Metódo que irá inserir as informações da Model no Banco de dados

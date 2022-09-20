@@ -3,37 +3,37 @@
 namespace App\Controller;
 use App\Model\ProdutoModel;
 
-class ProdutoController 
+class ProdutoController extends Controller
 {
     
-    // O método index será usado para devolver uma View.
+  
     
     public static function index()
     {
-      include 'Model/ProdutoModel.php'; 
+
         $model = new ProdutoModel(); 
         $model->getAllRows(); 
-        include 'View/modules/Produto/ListaProdutos.php'; 
+
+        parent::render('Produto/ListaProdutos', $model);
      }
 
 // Devolverá o formulário ao usuário
   
     public static function form()
     {
-        include 'Model/ProdutoModel.php';
+
         $model = new ProdutoModel();
 
         if(isset($_GET['id'])) 
             $model = $model->getById( (int) $_GET['id']);
             
-      
-        include 'View/modules/Produto/FormProduto.php'; 
+      parent::render('Produto/FormProduto', $model);
      }
   //Preencherá uma Model para que as informações sejam enviadas para o banco de dados para serem salvas.
 
     public static function save()
     {
-       include 'Model/ProdutoModel.php';
+
         // incluirá as informações do arquivo Model.
 
         // Abaixo cada propriedade do objeto será postada com os dados informados pelo usuário no formulário 
@@ -53,7 +53,7 @@ class ProdutoController
 
     public static function delete()
     {
-        include 'Model/ProdutoModel.php'; 
+     
 
         $model = new ProdutoModel();
 
