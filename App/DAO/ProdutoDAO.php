@@ -7,8 +7,7 @@ class ProdutoDAO extends DAO
 {
     // Propriedade da classe que  armazenará o link de conexão com o banco de dados.
 
-    private $conexao;
-
+    
 
     public function __construct()
     {    

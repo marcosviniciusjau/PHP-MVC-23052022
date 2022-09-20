@@ -5,7 +5,6 @@ use \PDO;
 
 class ProdutoCategoriaDAO extends DAO
 {
-    private $conexao;
 
 
     public function __construct()
