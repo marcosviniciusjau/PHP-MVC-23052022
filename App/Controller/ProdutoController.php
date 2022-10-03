@@ -10,6 +10,7 @@ class ProdutoController extends Controller
     
     public static function index()
     {
+        parent::isAuthenticated();
 
         $model = new ProdutoModel(); 
         $model->getAllRows(); 
@@ -21,6 +22,7 @@ class ProdutoController extends Controller
   
     public static function form()
     {
+        parent::isAuthenticated();
 
         $model = new ProdutoModel();
 
@@ -33,6 +35,7 @@ class ProdutoController extends Controller
 
     public static function save()
     {
+        parent::isAuthenticated();
 
         // incluirá as informações do arquivo Model.
 
@@ -54,6 +57,7 @@ class ProdutoController extends Controller
     public static function delete()
     {
      
+        parent::isAuthenticated();
 
         $model = new ProdutoModel();
 
