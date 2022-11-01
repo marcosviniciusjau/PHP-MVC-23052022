@@ -4,6 +4,7 @@ use App\Controller\PessoaController;
 use App\Controller\ProdutoController;
 use App\Controller\ProdutoCategoriaController;
 use App\Controller\LoginController;
+use App\Controller\UsuarioController;
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 

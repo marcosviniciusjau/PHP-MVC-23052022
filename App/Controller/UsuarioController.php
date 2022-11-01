@@ -10,7 +10,7 @@ class UsuarioController extends Controller
     
     public static function index()
     {
-        parent::isAuthenticated();
+        
 
         $model = new UsuarioModel(); 
         $model->getAllRows(); 
@@ -22,7 +22,7 @@ class UsuarioController extends Controller
   
     public static function form()
     {
-        parent::isAuthenticated();
+       
 
         $model = new UsuarioModel();
 
@@ -35,7 +35,7 @@ class UsuarioController extends Controller
 
     public static function save()
     {
-        parent::isAuthenticated();
+       
 
         // incluirá as informações do arquivo Model.
 
@@ -57,7 +57,7 @@ class UsuarioController extends Controller
     public static function delete()
     {
      
-        parent::isAuthenticated();
+        
 
         $model = new UsuarioModel();
 
