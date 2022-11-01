@@ -42,6 +42,22 @@ switch ($url) {
         PessoaController::delete();
         break;
 
+        case '/usuario':
+
+            UsuarioController::index();
+            break;
+    
+        case '/usuario/form':
+            UsuarioController::form();
+            break;
+    
+        case '/usuario/form/save':
+            UsuarioController::save();
+            break;
+    
+        case '/usuario/delete':
+            UsuarioController::delete();
+            break;
 
 
     case '/produto':
